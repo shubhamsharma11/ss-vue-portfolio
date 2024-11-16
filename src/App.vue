@@ -1,85 +1,66 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <v-theme-provider root>
+    <splash-screen v-if="loading && settings.isSplash" />
+    <v-app app>
+      <app-bar :isTheme="settings.isTheme" />
+      <v-main>
+        <router-view />
+        <v-fab-transition>
+          <v-btn
+            v-if="settings.isGoTop"
+            v-scroll="onScroll"
+            v-show="fab"
+            fab
+            dark
+            fixed
+            bottom
+            right
+            color="primary"
+            @click="toTop"
+          >
+            <v-icon>mdi-arrow-up</v-icon>
+          </v-btn>
+        </v-fab-transition>
+      </v-main>
+      <app-footer />
+    </v-app>
+  </v-theme-provider>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<script>
+import SplashScreen from './components/SplashScreen.vue'
+import AppBar from './components/AppBar.vue'
+import AppFooter from './components/AppFooter.vue'
+import { settings } from './shared/portfolio'
+
+export default {
+  name: 'App',
+
+  components: {
+    SplashScreen,
+    AppBar,
+    AppFooter,
+  },
+
+  data: () => ({
+    loading: true,
+    fab: false,
+    settings: settings,
+  }),
+  mounted() {
+    setTimeout(() => {
+      this.loading = false
+    }, 4000)
+  },
+  methods: {
+    onScroll(e) {
+      if (typeof window === 'undefined') return
+      const top = window.pageYOffset || e.target.scrollTop || 0
+      this.fab = top > 20
+    },
+    toTop() {
+      this.$vuetify.goTo(0)
+    },
+  },
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
+</script>
