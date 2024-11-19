@@ -1,51 +1,37 @@
 <template>
-  <div>
-    <v-app-bar :elevation="0" scroll-behavior="elevate" scroll-threshold="200">
-      <v-app-bar-title>
-        <span>&lt;{{ title }}/&gt;</span>
-      </v-app-bar-title>
+  <v-layout>
+    <v-app-bar color="primary" prominent>
+      <v-app-bar-nav-icon @click="drawer = true" class="d-flex d-md-none"></v-app-bar-nav-icon>
 
-      <template v-slot:prepend>
-        <v-app-bar-nav-icon @click="drawer = true" class="d-xs-flex d-md-none"></v-app-bar-nav-icon>
-      </template>
+      <v-toolbar-title>
+        <span>&lt;{{ title }}/&gt;</span>
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
       <template v-for="(item, i) in menuItems" :key="i">
-        <v-btn variant="outlined" :to="item.to" class="d-none d-md-flex px-5 mx-1">
+        <v-btn text plain :to="item.to" class="d-none d-md-flex px-5">
           {{ item.title }}
         </v-btn>
-      </template>
-
-      <template v-slot:append>
-        <v-btn
-          :icon="theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'"
-          @click="darkMode"
-        ></v-btn>
       </template>
     </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list :lines="false" nav>
-        <v-list-item
-          v-for="(item, index) in menuItems"
-          :key="index"
-          :value="item"
-          color="primary"
-          variant="outlined"
-          :to="item.to"
-        >
+      <v-list :lines="false" density="compact" nav>
+        <v-list-item v-for="(item, index) in menuItems" :key="index" :value="item" color="primary">
           <template v-slot:prepend>
             <v-icon :icon="item.icon"></v-icon>
           </template>
 
-          <v-list-item-title class="px-5">
-            {{ item.title }}
+          <v-list-item-title>
+            <v-btn text plain :to="item.to" class="d-none d-md-flex px-5">
+              {{ item.title }}
+            </v-btn>
           </v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-  </div>
+  </v-layout>
 </template>
 
 <script>
@@ -58,10 +44,6 @@ export default {
       type: Boolean,
       default: true,
     },
-    theme: {
-      type: String,
-      default: 'light',
-    },
   },
   data() {
     return {
@@ -73,7 +55,7 @@ export default {
   },
   methods: {
     darkMode() {
-      this.$emit('set-theme')
+      //this.$vuetify.theme.dark = !this.$vuetify.theme.dark
     },
   },
 }
