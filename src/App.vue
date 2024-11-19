@@ -5,7 +5,9 @@
       <AppBar :theme="theme" @set-theme="SetTheme"></AppBar>
 
       <v-main>
-        <RouterView />
+        <v-layout>
+          <RouterView />
+        </v-layout>
       </v-main>
 
       <app-footer />

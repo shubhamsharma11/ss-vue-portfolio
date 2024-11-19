@@ -34,6 +34,7 @@
           color="primary"
           variant="outlined"
           :to="item.to"
+          class="ma-2"
         >
           <template v-slot:prepend>
             <v-icon :icon="item.icon"></v-icon>

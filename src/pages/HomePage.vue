@@ -1,22 +1,22 @@
 <template>
-  <v-layout>
-    <v-container class="mt-5">
-      <v-row align="center" justify="center">
-        <v-col md="6" cols="12">
-          <h3 class="text-h1 font-weight-bold">Hi! I'm {{ greeting.nickname }}</h3>
-          <h4 class="text-h6 font-weight-regular">
-            {{ greeting.subTitle }}
-          </h4>
-          <SocialMedia />
-        </v-col>
-        <v-col md="6" cols="12">
-          <FeelingProud :theme="theme" width="100%" />
-        </v-col>
-      </v-row>
-    </v-container>
+  <div>
+    <v-row align="center" justify="center" class="mx-8 my-2">
+      <v-col md="6" cols="12">
+        <h3 class="text-h4 text-md-h3 text-lg-h1 font-weight-bold">
+          Hi! I'm {{ greeting.nickname }}
+        </h3>
+        <h4 class="text-md-subtitle-1 text-subtitle-2 font-weight-regular">
+          {{ greeting.subTitle }}
+        </h4>
+        <SocialMedia />
+      </v-col>
+      <v-col md="6" cols="12">
+        <FeelingProud :theme="theme" width="100%" />
+      </v-col>
+    </v-row>
     <AboutMe id="about" :greeting="greeting" :theme="theme" />
     <MySkills id="skills" :greeting="greeting" :theme="theme" />
-  </v-layout>
+  </div>
 </template>
 
 <script>
