@@ -14,7 +14,7 @@
         <FeelingProud :theme="theme" width="100%" />
       </v-col>
     </v-row>
-    <AboutMe id="about" :greeting="greeting" :theme="theme" />
+    <AboutMe id="about" :greeting="greeting" :theme="theme" :about-items="aboutItems" />
     <MySkills id="skills" :greeting="greeting" :theme="theme" />
   </div>
 </template>
@@ -26,7 +26,7 @@ import SocialMedia from '@/components/SocialMedia.vue'
 import AboutMe from '@/components/AboutMe.vue'
 import MySkills from '@/components/MySkills.vue'
 import { chosenTheme } from '@/shared/theme'
-import { greeting } from '@/shared/portfolio'
+import { greeting, aboutItems } from '@/shared/portfolio'
 
 export default {
   name: 'HomePage',
@@ -41,6 +41,7 @@ export default {
   data: () => ({
     theme: chosenTheme,
     greeting: greeting,
+    aboutItems: aboutItems,
   }),
 }
 </script>

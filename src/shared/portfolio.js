@@ -851,6 +851,24 @@ const contactPageData = {
   },
 }
 
+// About Me Section
+const aboutItems = `const coder={
+  name:'Shubham Sharma',
+  skills:['Vue JS', 'React JS', 'Next JS', 'MS SQL', 'MySql',
+   '.NET', '.NET Core', 'Azure', 'Azure Devops', 'Ansible',
+   'Terraform', 'Kubernetes', 'Docker'],
+  hardWorker:true,
+  quickLearner:true,
+  problemSolver:true,
+  hireable:function() {
+      return(
+        this.hardWorker&&
+        this.problemSolver&&
+        this.skills.length>=5
+      );
+    };
+  };`
+
 export {
   settings,
   seo,
@@ -865,4 +883,5 @@ export {
   projectsHeader,
   publicationsHeader,
   contactPageData,
+  aboutItems,
 }

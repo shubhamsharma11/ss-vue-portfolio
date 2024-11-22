@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <v-row align="center" justify="center" class="mb-n16">
+    <v-row align="center" justify="center" class="mb-n8">
       <h1 class="text-h2 font-weight-bold">About Me</h1>
     </v-row>
     <v-row align="center" justify="center">
@@ -9,15 +9,16 @@
       </v-col>
       <v-col md="6" offset-md="1" cols="12">
         <p class="text-body-1 font-weight-bold">WHO AM I ?</p>
-        <p class="text-body-1 font-weight-regular">
+        <p class="text-body-1 font-weight-regular mb-4">
           {{ greeting.description }}
         </p>
 
         <VCodeBlock
-          :code="items"
+          :code="aboutItems"
           highlightjs
-          label="Hello World"
+          :browser-window="true"
           lang="javascript"
+          :copy-button="false"
           theme="neon-bunny"
         />
       </v-col>
@@ -44,26 +45,9 @@ export default {
     theme: {
       type: Object,
     },
+    aboutItems: {
+      type: String,
+    },
   },
-
-  data: () => ({
-    items: `{
-      {
-        icon: 'mdi-phone-outline',
-        title: 'Phone',
-        value: '+91 9098727192',
-      },
-      {
-        icon: 'mdi-email-outline',
-        title: 'Email',
-        value: 'ssharma0834@gmail.com',
-      },
-      {
-        icon: 'mdi-map-marker-outline',
-        title: 'Location',
-        value: 'Madhya Pradesh, India',
-      },
-    }`,
-  }),
 }
 </script>
