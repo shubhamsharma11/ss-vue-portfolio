@@ -5,6 +5,7 @@ import vuetify from './vuetify'
 
 const app = createApp(App)
 
+// Register Global Plugins
 app.use(vuetify)
 app.use(router)
 

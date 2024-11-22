@@ -1,24 +1,22 @@
 <template>
   <div>
-    <v-container>
-      <v-row align="center" justify="center">
-        <v-col md="5" cols="12">
-          <AboutMeTask :theme="theme" width="100%" />
-        </v-col>
-        <v-col md="6" offset-md="1" cols="12">
-          <v-row align="center" justify="center">
-            <h1 class="text-h2 font-weight-bold">
-              {{ experience.title }}
-            </h1>
-            <h2>
-              {{ experience.subtitle }}
-            </h2>
-            <p class="text-body-1 font-weight-regular">
-              {{ experience.description }}
-            </p>
-          </v-row>
-        </v-col>
-      </v-row>
+    <v-row align="center" justify="center" class="mx-8 my-2">
+      <v-col md="5" cols="12">
+        <AboutMeTask :theme="theme" width="100%" />
+      </v-col>
+      <v-col md="6" offset-md="1" cols="12">
+        <h1 class="text-h2 font-weight-bold">
+          {{ experience.title }}
+        </h1>
+        <h2>
+          {{ experience.subtitle }}
+        </h2>
+        <p class="text-body-1 font-weight-regular">
+          {{ experience.description }}
+        </p>
+      </v-col>
+    </v-row>
+    <v-row align="center" justify="center" class="mx-8 my-2">
       <v-expansion-panels variant="popout">
         <v-expansion-panel
           v-for="(expSection, index) in experience.sections"
@@ -66,7 +64,7 @@
           </v-expansion-panel-text>
         </v-expansion-panel>
       </v-expansion-panels>
-    </v-container>
+    </v-row>
   </div>
 </template>
 
