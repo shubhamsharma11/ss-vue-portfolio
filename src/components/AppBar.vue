@@ -12,7 +12,7 @@
       <v-spacer></v-spacer>
 
       <template v-for="(item, i) in menuItems" :key="i">
-        <v-btn variant="outlined" :to="item.to" class="d-none d-md-flex px-5 mx-1">
+        <v-btn variant="outlined" :to="item.to" class="d-none d-md-flex px-5 mx-1" color="primary">
           {{ item.title }}
         </v-btn>
       </template>
@@ -25,13 +25,12 @@
       </template>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" absolute temporary color="primary">
       <v-list :lines="false" nav>
         <v-list-item
           v-for="(item, index) in menuItems"
           :key="index"
           :value="item"
-          color="primary"
           variant="outlined"
           :to="item.to"
           class="ma-2"
