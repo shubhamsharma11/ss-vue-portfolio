@@ -4,14 +4,12 @@
       <v-btn
         v-for="(s, i) in social"
         :key="i"
-        fab
-        small
-        class="mr-3"
+        class="ma-1"
         :color="s.color"
         dark
         :href="s.to"
+        :icon="s.icon"
       >
-        <v-icon v-text="s.icon" />
       </v-btn>
     </v-col>
     <v-col cols="12">
@@ -25,23 +23,23 @@
 
 <script>
 export default {
-  name: "SocialMedia",
+  name: 'SocialMedia',
 
   data: () => ({
     social: [
       {
-        color: "#0976B4",
-        to: "https://www.linkedin.com/in/shubhamsharma17/",
-        icon: "mdi-linkedin",
+        color: '#0976B4',
+        to: 'https://www.linkedin.com/in/shubhamsharma17/',
+        icon: 'mdi-linkedin',
       },
       {
-        color: "#333333",
-        to: "https://github.com/shubhamsharma11",
-        icon: "mdi-github",
+        color: '#333333',
+        to: 'https://github.com/shubhamsharma11',
+        icon: 'mdi-github',
       },
     ],
   }),
-};
+}
 </script>
 
 <style></style>
