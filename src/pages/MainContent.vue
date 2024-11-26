@@ -1,16 +1,20 @@
 <template>
-  <splash-screen v-if="loading && settings.isSplash" />
-  <div>
-    <AppBar :theme="theme" @set-theme="setTheme"></AppBar>
+  <slide-y-transition>
+    <splash-screen v-if="loading && settings.isSplash" :is-loading="loading" />
+  </slide-y-transition>
+  <slide-y-reverse-transition>
+    <div v-show="!loading">
+      <AppBar :theme="theme" @set-theme="setTheme"></AppBar>
 
-    <v-main>
-      <v-layout>
-        <RouterView />
-      </v-layout>
-    </v-main>
+      <v-main>
+        <v-layout>
+          <RouterView />
+        </v-layout>
+      </v-main>
 
-    <app-footer />
-  </div>
+      <app-footer />
+    </div>
+  </slide-y-reverse-transition>
 </template>
 
 <script>
@@ -39,7 +43,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.loading = false
-    }, 10000)
+    }, 2000)
   },
   methods: {
     onScroll(e) {

@@ -82,6 +82,6 @@ export default {
 span {
   font-family: Agustina, 'Babylonica', cursive;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 23px;
 }
 </style>
