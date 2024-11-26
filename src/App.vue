@@ -1,31 +1,18 @@
 <template>
   <v-responsive>
-    <splash-screen v-if="loading && settings.isSplash" />
     <v-app :theme="theme">
-      <AppBar :theme="theme" @set-theme="SetTheme"></AppBar>
-
-      <v-main>
-        <v-layout>
-          <RouterView />
-        </v-layout>
-      </v-main>
-
-      <app-footer />
+      <MainContent @set-theme="SetTheme" />
     </v-app>
   </v-responsive>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { RouterView } from 'vue-router'
-import AppFooter from './components/AppFooter.vue'
-import SplashScreen from './components/SplashScreen.vue'
-import AppBar from './components/AppBar.vue'
-import { settings } from './shared/portfolio'
+import MainContent from './pages/MainContent.vue'
 
 const theme = ref('light')
 
-function SetTheme() {
-  theme.value = theme.value === 'light' ? 'dark' : 'light'
+function SetTheme(newTheme) {
+  theme.value = newTheme
 }
 </script>
