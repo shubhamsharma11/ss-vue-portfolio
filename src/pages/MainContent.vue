@@ -6,13 +6,26 @@
     <div v-show="!loading">
       <AppBar :theme="theme" @set-theme="setTheme"></AppBar>
 
-      <v-main>
+      <v-main id="scroll-target">
         <v-layout>
           <RouterView />
         </v-layout>
       </v-main>
 
       <app-footer />
+      <v-fab
+        v-if="settings.isGoTop"
+        v-scroll="onScroll"
+        v-show="fab"
+        icon="mdi-arrow-up"
+        size="x-large"
+        class="position-fixed me-2"
+        location="bottom end"
+        app
+        appear
+        color="primary"
+        @click="toTop"
+      ></v-fab>
     </div>
   </slide-y-reverse-transition>
 </template>
@@ -48,11 +61,13 @@ export default {
   methods: {
     onScroll(e) {
       if (typeof window === 'undefined') return
-      const top = e.target.scrollTop || 0
-      this.fab = top > 20
+      const top = window.scrollY || e.target.scrollTop || 0
+      console.log(top)
+      this.fab = top >= 20
     },
     toTop() {
-      this.$vuetify.goTo(0)
+      document.body.scrollTop = 0
+      document.documentElement.scrollTop = 0
     },
     setTheme() {
       this.theme = this.theme === 'light' ? 'dark' : 'light'
