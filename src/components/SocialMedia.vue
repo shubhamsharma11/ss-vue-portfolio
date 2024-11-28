@@ -13,7 +13,13 @@
       </v-btn>
     </v-col>
     <v-col cols="12">
-      <v-btn x-large class="mt-5" color="primary">
+      <v-btn
+        x-large
+        class="mt-5"
+        color="primary"
+        href="https://drive.usercontent.google.com/uc?id=17lUXj2sbDsbKOw1TxZqbaClAqvqZNZd3&export=download"
+        target="_blank"
+      >
         <v-icon> mdi-download </v-icon>
         Download Resume
       </v-btn>

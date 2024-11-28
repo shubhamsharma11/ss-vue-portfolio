@@ -630,7 +630,7 @@ const competitiveSites = {
 const degrees = {
   degrees: [
     {
-      title: 'Indian Institute of Information Technology Kurnool',
+      title: 'Indian Institute of Information Technology',
       subtitle: 'B.Tech. in Computer Engineering',
       logo_path: 'iiitk_logo.png',
       alt_name: 'IIITDM Kurnool',
@@ -638,7 +638,7 @@ const degrees = {
       descriptions: [
         '⚡ I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.',
         '⚡ Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.',
-        '⚡ I was selected for Merit cum Means Scholarship which is given to top 10% of students in college. I have received award from respected director for consistently best performance in academics.',
+        '⚡ I have completed Database Fundamentals exam and earned MTA: Database Fundamentals Cretification.',
       ],
       website_link: 'http://iiitk.ac.in',
     },
@@ -763,14 +763,13 @@ const experience = {
       title: 'Work Experience',
       experiences: [
         {
-          title: 'Devops Engineer',
+          title: 'Senior Devops Engineer',
           company: 'Cognizant Solutions',
-          company_url: 'https://www.linkedin.com/company/muffito-inc/about/',
+          company_url: 'https://www.cognizant.com/in/en',
           logo_path: 'muffito_logo.png',
           duration: 'July 2021 - Present',
           location: 'Hyderabad, Telangana',
-          description:
-            'I have created complete Android Application for locating Pub, Bar and beverage shops around you. I have also worked on implementation of algorithms for Face Detection, Text extraction from Image. I was involved in a team for creating complete software architecure of mobile and web application as well as admin panel for company.',
+          description: `As a DevOps Engineer, I worked with Azure DevOps, Docker, Terraform, and CI/CD pipelines to automate deployment processes and streamline development workflows. I managed production deployments, troubleshot pipeline issues, and led a small team, fostering collaboration and improving efficiency. My role focused on enhancing system reliability and ensuring smooth, automated deployment cycles.`,
           color: '#9b1578',
         },
         {
@@ -780,8 +779,7 @@ const experience = {
           logo_path: 'legato_logo.png',
           duration: 'July 2017 - June 2021',
           location: 'Hyderabad, Telangana',
-          description:
-            'I am working on automating healthcare products. The projects involve automation for process improvements and for significantly enhancing the profits. I am currently working on Cancer Survival and Reoccurence Prediction. Our goal is to make AI system which scales and removes doctor dependency as much as possible.',
+          description: `As a .NET Developer, I worked with .NET Framework, .NET Core, ADO.NET, and databases like SQL Server and MySQL to build robust backend systems. I also developed responsive frontend applications using Angular, React, and Vue.js while collaborating in teams using Jira and Azure DevOps to ensure smooth project delivery.`,
           color: '#0879bf',
         },
       ],
@@ -790,26 +788,17 @@ const experience = {
       title: 'Educational Experience',
       experiences: [
         {
-          title: 'Data Science Research Intern',
-          company: 'Delhivery Pvt. Ltd.',
-          company_url: 'https://www.delhivery.com/',
+          title: 'B.E. in Information Technology',
+          company: 'Sushila Devi Bansal College of Engineering',
+          company_url: 'https://sdbc.ac.in/',
           logo_path: 'delhivery_logo.png',
-          duration: 'May 2019 - Sept 2019',
-          location: 'Gurgaon, Haryana',
-          description:
-            'I have worked on project of predicting freight rates based on previous data. There were two objectives: (1) To build a forecasting engine to predict daily freight rates. (2) To embed feature in the model which can explain the seasonal major changes in freight rate based on regions and locations. I have closely worked with deep learning models in combination with statistical methods to create solution for this. At the end of internship, I had created model deployed on AWS EC2 with the use of Kafka stream jobs, ElasticSearch and PostgreSQL.',
+          duration: 'July 2013 - June 2017',
+          location: 'Indore, Madhya Pradesh',
+          description: `
+          I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.
+          Apart from this, I have done courses on Deep Learning, Data Science, Cloud Computing and Full Stack Development.
+          I have also completed Database Fundamentals exam and earned MTA: Database Fundamentals Cretification.`,
           color: '#ee3c26',
-        },
-        {
-          title: 'Data Science Intern',
-          company: 'Intel Indexer LLC',
-          company_url: 'https://opencorporates.com/companies/us_dc/EXTUID_4170286',
-          logo_path: 'intel_logo.jpg',
-          duration: 'Nov 2018 - Dec 2018',
-          location: 'Work From Home',
-          description:
-            'This is financial Solution Company. I have made Supervised Learning model for the company which can perform time series analysis on Stock price data for 32 companies. I have built LSTM Neural Networks Model and trained the data of 32 companies for last 2 years. This model is also used for forecasting.',
-          color: '#0071C5',
         },
       ],
     },
