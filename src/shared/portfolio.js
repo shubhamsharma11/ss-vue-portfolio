@@ -130,7 +130,7 @@ const skills = {
       tools: [
         {
           skillName: 'C#',
-          icon: 'skill-icons:cs',
+          icon: 'devicon-plain:csharp',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -138,7 +138,15 @@ const skills = {
         },
         {
           skillName: 'Dot Net',
-          icon: 'skill-icons:dotnet',
+          icon: 'simple-icons:dotnet',
+          style: {
+            backgroundColor: 'transparent',
+            'font-size': '50px',
+          },
+        },
+        {
+          skillName: 'Dot Net Core',
+          icon: 'devicon-plain:dotnetcore',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -146,7 +154,7 @@ const skills = {
         },
         {
           skillName: 'HTML5',
-          icon: 'skill-icons:html',
+          icon: 'devicon-plain:html5',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -154,7 +162,7 @@ const skills = {
         },
         {
           skillName: 'CSS3',
-          icon: 'skill-icons:css',
+          icon: 'devicon-plain:css3',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -162,7 +170,7 @@ const skills = {
         },
         {
           skillName: 'Java Script',
-          icon: 'skill-icons:javascript',
+          icon: 'devicon-plain:javascript',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -170,16 +178,15 @@ const skills = {
         },
         {
           skillName: 'Vue JS',
-          icon: 'skill-icons:vuejs-light',
+          icon: 'devicon-plain:vuejs',
           style: {
             backgroundColor: 'transparent',
-            color: '#D00000',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Visual Studio Code',
-          icon: 'logos:visual-studio-code',
+          icon: 'proicons:visual-studio-code',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -187,7 +194,7 @@ const skills = {
         },
         {
           skillName: 'Visual Studio',
-          icon: 'logos:visual-studio',
+          icon: 'devicon-plain:visualstudio',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -195,16 +202,23 @@ const skills = {
         },
         {
           skillName: 'MySql',
-          icon: 'skill-icons:mysql-light',
+          icon: 'fontisto:mysql',
           style: {
             backgroundColor: 'transparent',
-            color: '#D00000',
+            'font-size': '50px',
+          },
+        },
+        {
+          skillName: 'Microsoft SQL Server',
+          icon: 'devicon-plain:microsoftsqlserver-wordmark',
+          style: {
+            backgroundColor: 'transparent',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Postman',
-          icon: 'skill-icons:postman',
+          icon: 'devicon-plain:postman',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -226,7 +240,7 @@ const skills = {
       tools: [
         {
           skillName: 'Azure Devops',
-          icon: 'skill-icons:azure-light',
+          icon: 'devicon-plain:azuredevops',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -234,34 +248,39 @@ const skills = {
         },
         {
           skillName: 'Jenkins',
-          icon: 'skill-icons:jenkins-light',
+          icon: 'devicon-plain:jenkins',
           style: {
             backgroundColor: 'transparent',
-            color: '#D00000',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Azure Portal',
-          icon: 'teenyicons:azure-solid',
+          icon: 'lineicons:azure',
           style: {
             backgroundColor: 'transparent',
-            color: '#3776AB',
+            'font-size': '50px',
+          },
+        },
+        {
+          skillName: 'CICD Pipelines',
+          icon: 'cib:azure-pipelines',
+          style: {
+            backgroundColor: 'transparent',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Powershell',
-          icon: 'skill-icons:powershell-light',
+          icon: 'file-icons:powershell',
           style: {
             backgroundColor: 'transparent',
-            color: '#D00000',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Docker',
-          icon: 'skill-icons:docker',
+          icon: 'devicon-plain:docker',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -269,25 +288,22 @@ const skills = {
         },
         {
           skillName: 'Ansible',
-          icon: 'simple-icons:ansible',
+          icon: 'file-icons:ansible',
           style: {
-            color: '#326CE5',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Terraform',
-          icon: 'simple-icons:terraform',
+          icon: 'file-icons:terraform',
           style: {
-            color: '#326CE5',
             'font-size': '50px',
           },
         },
         {
           skillName: 'Kubernetes',
-          icon: 'simple-icons:kubernetes',
+          icon: 'lineicons:kubernetes',
           style: {
-            color: '#326CE5',
             'font-size': '50px',
           },
         },
@@ -310,7 +326,7 @@ const skills = {
       tools: [
         {
           skillName: 'Kotlin',
-          icon: 'skill-icons:kotlin-light',
+          icon: 'simple-icons:kotlin',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -318,7 +334,7 @@ const skills = {
         },
         {
           skillName: 'Java',
-          icon: 'skill-icons:java-light',
+          icon: 'devicon-plain:java',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -326,7 +342,7 @@ const skills = {
         },
         {
           skillName: 'Android Studio',
-          icon: 'skill-icons:androidstudio-light',
+          icon: 'devicon-plain:androidstudio',
           style: {
             backgroundColor: 'transparent',
             'font-size': '50px',
@@ -334,10 +350,9 @@ const skills = {
         },
         {
           skillName: 'MySql',
-          icon: 'skill-icons:mysql-light',
+          icon: 'fontisto:mysql',
           style: {
             backgroundColor: 'transparent',
-            color: '#D00000',
             'font-size': '50px',
           },
         },

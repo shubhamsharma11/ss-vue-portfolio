@@ -11,7 +11,7 @@
           <v-card-text>
             <v-row align="center" justify="center" class="ma-5">
               <span v-for="(tool, i) in skill.tools" :key="i" class="pa-2">
-                <font-icon :alt="tool.skillName" :icon="tool.icon" :style="tool.style" />
+                <font-icon :alt="tool.skillName" :icon="tool.icon" :style="tool.style" /> 
               </span>
             </v-row>
             <v-row class="ma-5">
