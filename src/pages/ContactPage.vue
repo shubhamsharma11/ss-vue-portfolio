@@ -7,7 +7,7 @@
     </v-row>
     <v-row align="center" justify="center">
       <v-col md="6" cols="12">
-        <v-img src="../../public/images/contact.svg"></v-img>
+        <ContactMe />
       </v-col>
       <v-col md="5" offset-md="1" cols="12">
         <p class="text-body-1 font-weight-regular">
@@ -55,9 +55,14 @@
 </template>
 
 <script>
+import ContactMe from '../svg/ContactMe.vue'
 import { contactPageData } from '../shared/portfolio'
 
 export default {
+  components: {
+    ContactMe,
+  },
+
   data() {
     return {
       contact: contactPageData,
