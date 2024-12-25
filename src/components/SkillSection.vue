@@ -9,7 +9,7 @@
       <v-tabs-window-item v-for="(skill, index) in skills.data" :key="skill.title" :value="index">
         <v-card flat>
           <v-card-text>
-            <v-row align="center" justify="center" class="ma-5">
+            <v-row align="center" justify="center" class="my-2">
               <v-slide-group show-arrows>
                 <v-slide-group-item v-for="(tool, i) in skill.tools" :key="i">
                   <font-icon
