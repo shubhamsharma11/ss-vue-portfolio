@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center" align="center" no-gutters>
+  <v-row justify="center" no-gutters>
     <v-col cols="12" class="mt-5">
       <v-btn
         v-for="(s, i) in social"
@@ -12,7 +12,7 @@
       >
       </v-btn>
     </v-col>
-    <v-col cols="12" v-if="isDownload">
+    <v-col cols="12">
       <v-btn
         x-large
         class="mt-5"
@@ -45,13 +45,6 @@ export default {
       },
     ],
   }),
-
-  props: {
-    isDownload: {
-      type: Boolean,
-      default: true,
-    },
-  },
 }
 </script>
 
