@@ -10,7 +10,7 @@
         <v-card flat>
           <v-card-text>
             <v-row align="center" justify="center" class="ma-5">
-              <v-slide-group show-arrows>
+              <v-slide-group>
                 <v-slide-group-item v-for="(tool, i) in skill.tools" :key="i">
                   <font-icon
                     :alt="tool.skillName"
