@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <v-row align="center" justify="center" class="mx-8 my-2">
       <v-col md="6" cols="12">
         <h3 class="text-h4 text-md-h3 text-lg-h1 font-weight-bold">
@@ -11,12 +11,12 @@
         <SocialMedia />
       </v-col>
       <v-col md="6" cols="12">
-        <FeelingProud :theme="theme" width="100%" />
+        <FeelingProud :theme="theme" width="100%" height="100%" />
       </v-col>
     </v-row>
     <AboutMe id="about" :greeting="greeting" :theme="theme" :about-items="aboutItems" />
     <MySkills id="skills" :greeting="greeting" :theme="theme" />
-  </div>
+  </v-container>
 </template>
 
 <script>

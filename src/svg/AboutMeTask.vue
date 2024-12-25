@@ -31,13 +31,7 @@
       transform="translate(-69.5 -78.57247)"
       :fill="theme.text"
     />
-    <ellipse
-      cx="752.96319"
-      cy="688.14768"
-      rx="113.08238"
-      ry="26.20202"
-      opacity="0.1"
-    />
+    <ellipse cx="752.96319" cy="688.14768" rx="113.08238" ry="26.20202" opacity="0.1" />
     <path
       d="M1107.47,769.93754c0,10.11-29.37988,19.55-80.13995,27.5-38.38-4.19-64.95-13.24-64.95-23.72,0-13.05,41.16-23.87,95.02991-25.87C1089.51,754.53751,1107.47,762.0275,1107.47,769.93754Z"
       transform="translate(-69.5 -78.57247)"
@@ -48,61 +42,14 @@
       transform="translate(-69.5 -78.57247)"
       opacity="0.1"
     />
-    <rect
-      x="56.08151"
-      width="456.00701"
-      height="683.09115"
-      :fill="theme.text"
-    />
-    <rect
-      x="83.66258"
-      y="237.1972"
-      width="428.42594"
-      height="209.61613"
-      :fill="dark"
-    />
-    <rect
-      x="256.50394"
-      y="241.79404"
-      width="423.8291"
-      height="199.50307"
-      :fill="theme.text"
-    />
-    <rect
-      x="282.47612"
-      y="271.21385"
-      width="94.695"
-      height="34.01665"
-      :fill="highlight"
-    />
-    <rect
-      x="305.92003"
-      y="330.97283"
-      width="348.44084"
-      height="9.19369"
-      :fill="highlight"
-    />
-    <rect
-      x="305.92003"
-      y="354.87642"
-      width="348.44084"
-      height="9.19369"
-      :fill="highlight"
-    />
-    <rect
-      x="305.92003"
-      y="378.78002"
-      width="348.44084"
-      height="9.19369"
-      :fill="highlight"
-    />
-    <rect
-      x="305.92003"
-      y="402.68361"
-      width="348.44084"
-      height="9.19369"
-      :fill="highlight"
-    />
+    <rect x="56.08151" width="456.00701" height="683.09115" :fill="theme.text" />
+    <rect x="83.66258" y="237.1972" width="428.42594" height="209.61613" :fill="dark" />
+    <rect x="256.50394" y="241.79404" width="423.8291" height="199.50307" :fill="theme.text" />
+    <rect x="282.47612" y="271.21385" width="94.695" height="34.01665" :fill="highlight" />
+    <rect x="305.92003" y="330.97283" width="348.44084" height="9.19369" :fill="highlight" />
+    <rect x="305.92003" y="354.87642" width="348.44084" height="9.19369" :fill="highlight" />
+    <rect x="305.92003" y="378.78002" width="348.44084" height="9.19369" :fill="highlight" />
+    <rect x="305.92003" y="402.68361" width="348.44084" height="9.19369" :fill="highlight" />
     <rect
       x="86.42068"
       y="77.22699"
@@ -281,11 +228,11 @@ export default {
     },
     width: {
       type: String,
-      default: "711.1879",
+      default: '500',
     },
     height: {
       type: String,
-      default: "669.68268",
+      default: '300',
     },
   },
   computed: {
@@ -311,10 +258,8 @@ export default {
       // }
       return this.theme.dark
     },
-  }
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -789,7 +789,7 @@ const experience = {
         },
         {
           title: 'Software Engineer',
-          company: 'Innova Solutions (ACS Solutions)',
+          company: 'GGK Tech (ACS Solutions)',
           company_url: 'https://www.innovasolutions.com/',
           logo_path: 'legato_logo.png',
           duration: 'July 2017 - June 2021',
@@ -803,8 +803,8 @@ const experience = {
       title: 'Educational Experience',
       experiences: [
         {
-          title: 'B.E. in Information Technology',
-          company: 'Sushila Devi Bansal College of Engineering',
+          title: 'Bachelors (B.E. in I.T.)',
+          company: 'S.D. Bansal College of Engg.',
           company_url: 'https://sdbc.ac.in/',
           logo_path: 'delhivery_logo.png',
           duration: 'July 2013 - June 2017',

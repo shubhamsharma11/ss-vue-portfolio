@@ -1,13 +1,15 @@
 <template>
-  <div>
-    <v-row align="center" justify="center" class="mx-8 my-2">
-      <v-col md="5" cols="12">
-        <AboutMeTask :theme="theme" width="100%" />
+  <v-container>
+    <v-row align="center" justify="center" class="mt-5">
+      <h1 class="text-h2 font-weight-bold">
+        {{ experience.title }}
+      </h1>
+    </v-row>
+    <v-row align="center" justify="center">
+      <v-col md="6" cols="12" class="pa-5">
+        <AboutMeTask :theme="theme" width="100%" height="100%" />
       </v-col>
-      <v-col md="6" offset-md="1" cols="12">
-        <h1 class="text-h2 font-weight-bold">
-          {{ experience.title }}
-        </h1>
+      <v-col md="6" cols="12">
         <h2>
           {{ experience.subtitle }}
         </h2>
@@ -16,7 +18,7 @@
         </p>
       </v-col>
     </v-row>
-    <v-row align="center" justify="center" class="mx-8 my-2">
+    <v-row align="center" justify="center">
       <v-expansion-panels variant="popout">
         <v-expansion-panel
           v-for="(expSection, index) in experience.sections"
@@ -65,7 +67,7 @@
         </v-expansion-panel>
       </v-expansion-panels>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script>

@@ -69,13 +69,7 @@
       transform="translate(-244.40605 -115.15866)"
       :fill="dark"
     />
-    <rect
-      x="365.82336"
-      y="130.42445"
-      width="249.99557"
-      height="139.87094"
-      fill="#f2f2f2"
-    />
+    <rect x="365.82336" y="130.42445" width="249.99557" height="139.87094" fill="#f2f2f2" />
     <circle cx="490.82114" cy="125.99415" r="1.58225" fill="#f2f2f2" />
     <circle cx="490.82114" cy="294.34559" r="6.01255" fill="#f2f2f2" />
     <polygon
@@ -92,13 +86,7 @@
       transform="translate(-244.40605 -115.15866)"
       opacity="0.1"
     />
-    <ellipse
-      cx="532.40017"
-      cy="350.99016"
-      rx="4.11385"
-      ry="1.2658"
-      fill="#f2f2f2"
-    />
+    <ellipse cx="532.40017" cy="350.99016" rx="4.11385" ry="1.2658" fill="#f2f2f2" />
     <polygon
       points="481.452 357.952 481.452 361.117 311.202 361.117 311.202 358.585 311.436 357.952 481.452 357.952"
       opacity="0.1"
@@ -341,50 +329,42 @@
         :fill="highlight"
       />
     </g>
-  </svg>  
+  </svg>
 </template>
 
 <script>
 export default {
-  name: "FeelingProud",
+  name: 'FeelingProud',
   props: {
     theme: {
       type: Object,
     },
     width: {
       type: String,
-      default: "711.1879",
+      default: '600',
     },
     height: {
       type: String,
-      default: "669.68268",
+      default: '300',
     },
   },
   computed: {
     highlight() {
-      if(this.$vuetify.theme.isDark)
-      {
+      if (this.$vuetify.theme.isDark) {
         return this.theme.dark
-      }
-      else
-      {
+      } else {
         return this.theme.imageHighlight
       }
     },
     dark() {
-      if(this.$vuetify.theme.isDark)
-      {
+      if (this.$vuetify.theme.isDark) {
         return this.theme.imageHighlight
-      }
-      else
-      {
+      } else {
         return this.theme.dark
       }
     },
-  }
+  },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
